@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+</head>
+<body class="body">
+<div class="page">
+
+  <header class="header">
+    <a href="/">
+      <img class="header__logo" src="<%=require('./images/logo.svg')%>" alt="Место">
+    </a>
+  </header>
+
+  <main class="content">
+    <section class="profile">
+      <div class="profile__card">
+        <button class="profile__avatar"></button>
+        <div class="profile__text">
+          <h1 class="profile__name"></h1>
+          <p class="profile__description"></p>
+        </div>
+        <button class="profile__edit-button transparent-button-hover" type="button"></button>
+      </div>
+      <button class="profile__add-button transparent-button-hover" type="button"></button>
+    </section>
+
+    <section class="cards">
+      <ul class="cards__list">
+
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copyright">© 2020 Mesto Russia</p>
+  </footer>
+
+  <template id="card-template">
+    <li class="card">
+      <figure class="card__item">
+        <img class="card__image" src="#" alt="Изображение">
+        <button class="card__delete-button" type="button"></button>
+        <figcaption class="card__info">
+          <h2 class="card__title">Карачаевск</h2>
+          <div class="card__like">
+            <button class="card__like-button" type="button"></button>
+            <span class="card__like-count">0</span>
+          </div>
+        </figcaption>
+      </figure>
+    </li>
+  </template>
+
+  <section id="popup-edit-profile" class="popup">
+    <div class="popup__container">
+      <button class="popup__close-button transparent-button-hover" type="button"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup__form form-edit-profile" name="formprofile" id="form-edit-profile" novalidate>
+        <input required id="user-name" name="user-name" type="text" class="popup__input popup__input_text_name " placeholder="Имя"
+               minlength="2"
+               maxlength="40"
+               pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
+               data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
+        <span class="user-name-error popup__error"></span>
+        <input id='user-info' required type="text" class="popup__input popup__input_text_job" placeholder="Сфера деятельности" minlength="2"
+               maxlength="200"
+               pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
+               data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
+        <span class="user-info-error popup__error"></span>
+        <button type="submit" class="popup__button">Сохранить</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="popup-edit-avatar" class="popup">
+    <div class="popup__container">
+      <button class="popup__close-button transparent-button-hover" type="button"></button>
+      <h2 class="popup__title">Обновить аватар</h2>
+      <form class="popup__form" name="formavatar" novalidate>
+        <input type="url" id="avatar-url" class="popup__input popup__input_avatar_link" placeholder="Ссылка на картинку" required>
+        <span class="avatar-url-error popup__error"></span>
+        <button type="submit" class="popup__button">Сохранить</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="popup-new-card" class="popup">
+    <div class="popup__container">
+      <button class="popup__close-button transparent-button-hover" type="button"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form class="popup__form" name="formcard" novalidate>
+        <input id="card-name"type="text" class="popup__input popup__input_place_name" placeholder="Название" required minlength="2"
+               maxlength="30"
+               pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
+               data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
+        <span class="card-name-error popup__error"></span>
+        <input type="url" id="card-url" class="popup__input popup__input_place_link" placeholder="Ссылка на картинку" required>
+        <span class="card-url-error popup__error"></span>
+        <button type="submit" class="popup__button">Создать</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="popup-image-open" class="popup popup_image-overlay">
+    <div class="popup__image-container">
+      <button class="popup__close-button transparent-button-hover" type="button"></button>
+      <img class="popup__image" src="#" alt="фото места">
+      <p class="popup__image-description">Место</p>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

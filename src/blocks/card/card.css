@@ -1,0 +1,10 @@
+.card {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #ffffff;
+    min-height: 362px;
+
+
+}

@@ -1,0 +1,15 @@
+.header {
+    margin: 45px auto 0;
+    border-bottom: 1px solid rgba(84,84,84,0.7);
+}
+
+/* Этот медиа-запрос добавлен для изменения боковых отступов с 48 на 24px,
+без него замечание из первой итерации ревью «На 768 Не по макету ширина header», не будет устранено :) */
+
+
+@media screen and (max-width: 920px) {
+    .header {
+        margin-top: 28px;
+        padding-left: 27px;
+    }
+}
