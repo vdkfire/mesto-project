@@ -14,3 +14,5 @@
 Концепция парного программирования не соблюдена, так как напарник ушёл в академ
 
 
+## Ссылка на GitHub Pages
+https://vdkfire.github.io/mesto-project/index.html
