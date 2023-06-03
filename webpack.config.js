@@ -19,6 +19,7 @@ module.exports = {
         open: true,
         hot: true
     },
+    devtool: 'eval-source-map',
     module: {
         rules: [{
             test: /\.js$/,

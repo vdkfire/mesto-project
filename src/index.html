@@ -59,13 +59,13 @@
       <button class="popup__close-button transparent-button-hover" type="button"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
       <form class="popup__form form-edit-profile" name="formprofile" id="form-edit-profile" novalidate>
-        <input required id="user-name" name="user-name" type="text" class="popup__input popup__input_text_name " placeholder="Имя"
+        <input required id="user-name" name="username" type="text" class="popup__input popup__input_text_name " placeholder="Имя"
                minlength="2"
                maxlength="40"
                pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
                data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
         <span class="user-name-error popup__error"></span>
-        <input id='user-info' required type="text" class="popup__input popup__input_text_job" placeholder="Сфера деятельности" minlength="2"
+        <input id='user-info' name="userinfo" required type="text" class="popup__input popup__input_text_job" placeholder="Сфера деятельности" minlength="2"
                maxlength="200"
                pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
                data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
@@ -80,7 +80,7 @@
       <button class="popup__close-button transparent-button-hover" type="button"></button>
       <h2 class="popup__title">Обновить аватар</h2>
       <form class="popup__form" name="formavatar" novalidate>
-        <input type="url" id="avatar-url" class="popup__input popup__input_avatar_link" placeholder="Ссылка на картинку" required>
+        <input type="url" id="avatar-url" name="avatarurl" class="popup__input popup__input_avatar_link" placeholder="Ссылка на картинку" required>
         <span class="avatar-url-error popup__error"></span>
         <button type="submit" class="popup__button">Сохранить</button>
       </form>
@@ -92,12 +92,12 @@
       <button class="popup__close-button transparent-button-hover" type="button"></button>
       <h2 class="popup__title">Новое место</h2>
       <form class="popup__form" name="formcard" novalidate>
-        <input id="card-name"type="text" class="popup__input popup__input_place_name" placeholder="Название" required minlength="2"
+        <input id="card-name" name="cardname" type="text" class="popup__input popup__input_place_name" placeholder="Название" required minlength="2"
                maxlength="30"
                pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
                data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
         <span class="card-name-error popup__error"></span>
-        <input type="url" id="card-url" class="popup__input popup__input_place_link" placeholder="Ссылка на картинку" required>
+        <input type="url" id="card-url" name="cardurl" class="popup__input popup__input_place_link" placeholder="Ссылка на картинку" required>
         <span class="card-url-error popup__error"></span>
         <button type="submit" class="popup__button">Создать</button>
       </form>
