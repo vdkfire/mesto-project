@@ -34,6 +34,8 @@ class Card {
             this._handleCardLike(this._id);
         });
 
+        this._cardLikeCount = this._card.querySelector('.card__like-count');
+
         this._cardDeleteButton = this._element.querySelector('.card__delete-button');
         this._cardDeleteButton.addEventListener('click', () => {
             this._handleCardDelete(this._id)
@@ -64,7 +66,8 @@ class Card {
 
     setLikes(likes){
         this._likes = likes
-        this._card.querySelector('.card__like-count').textContent = this._likes.length;
+        this._cardLikeCount.textContent = this._likes.length;
+
         if(this.isLiked()){
             this._cardLikeButton.classList.add('card__like-button_active');
         }else{
