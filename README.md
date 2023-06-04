@@ -9,6 +9,10 @@
 * JavaScript
 * Методология БЭМ
 * Адаптивная вёрстка
+* ООП
+
+Концепция парного программирования не соблюдена, так как напарник ушёл в академ
+
 
 ## Ссылка на GitHub Pages
-https://nglebov.github.io/mesto-project/index.html
+https://vdkfire.github.io/mesto-project/index.html
